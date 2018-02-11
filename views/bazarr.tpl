@@ -52,7 +52,7 @@
                     <thead>
                         <tr>
                             <th class="six wide">Series</th>
-                            <th class="one wide">Episode</th>
+                            <th class="one wide right aligned">Episode</th>
                             <th class="seven wide">Episode Title</th>
                             <th class="two wide">Date</th>
                         </tr>
@@ -61,7 +61,7 @@
                     %for row in history_list:
                         <tr class="selectable">
                             <td>{{row[0]}}</td>
-                            <td>{{row[1]}}</td>
+                            <td class="right aligned">{{row[1]}}</td>
                             <td>{{row[2]}}</td>
                             <td>{{row[3]}}</td>
                         </tr>
@@ -75,7 +75,7 @@
                     <thead>
                         <tr>
                             <th class="six wide">Series</th>
-                            <th class="one wide">Episode</th>
+                            <th class="one wide right aligned">Episode</th>
                             <th class="seven wide">Episode Title</th>
                             <th class="two wide">Missing subtitles</th>
                         </tr>
@@ -94,7 +94,7 @@
                     %>
                         <tr class="selectable">
                             <td>{{row[0]}}</td>
-                            <td>{{row[1]}}</td>
+                            <td class="right aligned">{{row[1]}}</td>
                             <td>{{row[2]}}</td>
                             <td>
                                 %for language in subs_languages_list:

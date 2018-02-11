@@ -68,7 +68,7 @@
                     <thead>
                         <tr>
                             <th class="six wide">Series</th>
-                            <th class="one wide">Episode</th>
+                            <th class="one wide right aligned">Episode</th>
                             <th class="seven wide">Episode Title</th>
                             <th class="two wide">Air Date</th>
                         </tr>
@@ -77,7 +77,7 @@
                     %for row in calendar_list:
                         <tr class="selectable">
                             <td>{{row[0]}}</td>
-                            <td>{{str(row[2]) + 'x' + str(row[3]).zfill(2)}}</td>
+                            <td class="right aligned">{{str(row[2]) + 'x' + str(row[3]).zfill(2)}}</td>
                             <td>{{row[1]}}</td>
                             <td>{{row[4]}}</td>
                         </tr>
@@ -91,7 +91,7 @@
                     <thead>
                         <tr>
                             <th class="twelve wide">Series</th>
-                            <th class="two wide">Next Episode</th>
+                            <th class="two wide right aligned">Next Episode</th>
                             <th class="two wide">Air Date</th>
                         </tr>
                     </thead>
@@ -99,7 +99,7 @@
                     %for row in break_list:
                         <tr class="selectable">
                             <td>{{row[0]}}</td>
-                            <td>{{str(row[1]) + 'x' + str(row[2]).zfill(2)}}</td>
+                            <td class="right aligned">{{str(row[1]) + 'x' + str(row[2]).zfill(2)}}</td>
                             <td>{{row[3]}}</td>
                         </tr>
                     %end
@@ -112,7 +112,7 @@
                     <thead>
                         <tr>
                             <th class="twelve wide">Series</th>
-                            <th class="two wide">Next Seasons</th>
+                            <th class="two wide right aligned">Next Seasons</th>
                             <th class="two wide">Air Date</th>
                         </tr>
                     </thead>
@@ -120,7 +120,7 @@
                     %for row in upcoming_list:
                         <tr class="selectable">
                             <td>{{row[0]}}</td>
-                            <td>{{row[1]}}</td>
+                            <td class="right aligned">{{row[1]}}</td>
                             <td>{{row[2]}}</td>
                         </tr>
                     %end
@@ -133,7 +133,7 @@
                     <thead>
                         <tr>
                             <th class="six wide">Series</th>
-                            <th class="one wide">Episode</th>
+                            <th class="one wide right aligned">Episode</th>
                             <th class="seven wide">Episode Title</th>
                             <th class="two wide">Air Date</th>
                         </tr>
@@ -142,7 +142,7 @@
                     %for row in missing_list:
                         <tr class="selectable">
                             <td>{{row[0]}}</td>
-                            <td>{{str(row[2]) + 'x' + str(row[3]).zfill(2)}}</td>
+                            <td class="right aligned">{{str(row[2]) + 'x' + str(row[3]).zfill(2)}}</td>
                             <td>{{row[1]}}</td>
                             <td>{{row[4]}}</td>
                         </tr>

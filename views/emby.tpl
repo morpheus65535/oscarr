@@ -53,7 +53,7 @@
                         <tr>
                             <th class="one wide"></th>
                             <th class="six wide">Series</th>
-                            <th class="one wide">Episode</th>
+                            <th class="one wide right aligned">Episode</th>
                             <th class="six wide">Episode Title</th>
                             <th class="two wide">Date Added</th>
                         </tr>
@@ -67,7 +67,7 @@
                             <td></td>
                             %end
                             <td>{{row[1]}}</td>
-                            <td>{{str(row[3]) + 'x' + str(row[4]).zfill(2)}}</td>
+                            <td class="right aligned">{{str(row[3]) + 'x' + str(row[4]).zfill(2)}}</td>
                             <td>{{row[2]}}</td>
                             <td>{{row[5]}}</td>
                         </tr>
