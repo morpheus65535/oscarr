@@ -1,0 +1,7 @@
+*.pyc
+cachefile.dbm
+*.log
+*.log.*
+*.db
+*.pyc
+.idea/*
