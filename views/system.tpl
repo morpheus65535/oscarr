@@ -16,7 +16,7 @@
         <meta name="msapplication-config" content="{{base_url}}static/browserconfig.xml">
         <meta name="theme-color" content="#ffffff">
 		
-		<title>System - Bazarr</title>
+		<title>System - Oscarr</title>
 		
 		<style>
 			body {
@@ -166,7 +166,7 @@
 	})
 
 	$('#download_log').click(function(){
-		window.location = '{{base_url}}bazarr.log';
+		window.location = '{{base_url}}oscarr.log';
 	})
 
 	$('#empty_log').click(function(){
