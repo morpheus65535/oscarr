@@ -1,0 +1,9 @@
+bottle
+bottle-fdsend
+gitpython
+isodate
+Pillow
+py-pretty
+requests
+urllib3
+waitress
