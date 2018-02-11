@@ -589,6 +589,14 @@ def get_logs(page):
 
     return template('logs', logs=logs, base_url=base_url)
 
+@route(base_url + 'execute/<taskid>')
+def execute_task(taskid):
+    ref = request.environ['HTTP_REFERER']
+
+    execute_now(taskid)
+
+    redirect(ref)
+
 def configured():
     conn = sqlite3.connect(os.path.join(os.path.dirname(__file__), 'data/db/oscarr.db'), timeout=30)
     c = conn.cursor()
