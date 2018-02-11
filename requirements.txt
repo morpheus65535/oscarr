@@ -3,6 +3,7 @@ bottle-fdsend
 gitpython
 isodate
 Pillow
+pytz
 py-pretty
 requests
 urllib3
