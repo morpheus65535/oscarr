@@ -1,4 +1,4 @@
-# bazarr
+# Oscarr
 Oscarr is a dashboard application for users of Plex, Emby, Sonarr, Radarr and Bazarr. It gives you and overview of your media management software.
 
 # Support
