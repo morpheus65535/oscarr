@@ -11,6 +11,6 @@ RUN apk add --update git py-pip jpeg-dev && \
 
 VOLUME /oscarr/data
 
-EXPOSE 6767
+EXPOSE 5656
 
 CMD ["python", "/oscarr/oscarr.py"]

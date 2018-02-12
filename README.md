@@ -6,9 +6,10 @@ For installation and configuration instructions, see [wiki](https://github.com/m
 
 If you find a bug, please open an issue on [Github](https://github.com/morpheus65535/oscarr/issues).
 
-If you want to request a feature, you can do it on [Feathub](http://feathub.com/morpheus65535/oscarr).
-
 You can also reach me on [Discord](https://discord.gg/Mw4dVc3).
+
+# Feature Requests
+[![Feature Requests](http://feathub.com/morpheus65535/oscarr?format=svg)](http://feathub.com/morpheus65535/oscarr)
 
 ## Major Features Include:
 
