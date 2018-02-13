@@ -345,7 +345,7 @@ def bazarr():
     try:
         missing_json = requests.get(url_bazarr_api_missing).json()
     except:
-        missing_list.append(['Unable to connect to Bazarr. Check your settings.', '', '', '', ''])
+        missing_list.append(['Unable to connect to Bazarr. Check your settings.', '', '', '[]'])
     else:
         for missing in missing_json['subtitles']:
             if len(missing_list) <= 9:
@@ -356,7 +356,7 @@ def bazarr():
     try:
         history_json = requests.get(url_bazarr_api_history).json()
     except:
-        history_list.append(['Unable to connect to Bazarr. Check your settings.', '', '', '', ''])
+        history_list.append(['Unable to connect to Bazarr. Check your settings.', '', '', ''])
     else:
         for history in history_json['subtitles']:
             if len(history_list) <= 9:
