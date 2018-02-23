@@ -43,13 +43,25 @@
 
         %if rootfolder_list is not None:
         <div id="fondblanc" class="ui container">
-            %for row in rootfolder_list:
-            <div class="ui small header"><i class="folder open outline icon"></i>{{row[0]}}</div>
-            <div class="ui progress" data-percent="{{row[3]}}">
-                <div class="bar">
-                    <div class="progress"></div>
+            %if len(rootfolder_list) > 1:
+            <div class="ui grid">
+            %end
+                %for row in rootfolder_list:
+                %if len(rootfolder_list) > 1:
+                <div class="eight wide column">
+                %end
+                    <div class="ui small header"><i class="folder open outline icon"></i>{{row[0]}}</div>
+                    <div class="ui progress" data-percent="{{row[3]}}">
+                        <div class="bar">
+                            <div class="progress"></div>
+                        </div>
+                        <div class="label">{{row[1]}} free out of {{row[2]}}</div>
+                    </div>
+                %if len(rootfolder_list) > 1:
                 </div>
-                <div class="label">{{row[1]}} free out of {{row[2]}}</div>
+                %end
+                %end
+            %if len(rootfolder_list) > 1:
             </div>
             %end
         </div>
