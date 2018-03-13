@@ -16,7 +16,7 @@
                 padding-right: 128px;
             }
             .item {
-                opacity: 0.4;
+                opacity: 0.9;
             }
             .prompt {
                 background-color: #333333 !important;
