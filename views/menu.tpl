@@ -2,17 +2,21 @@
     <head>
         <!DOCTYPE html>
         <style>
+            body {
+                background-color: #272727;
+            }
             .massive.menu {
                 background: #272727 !important;
             }
     	    #divmenu {
                 background: #272727 !important;
-                background-color: #000000;
-                opacity: 0.8;
                 padding-top: 2em;
                 padding-bottom: 1em;
                 padding-left: 1em;
                 padding-right: 128px;
+            }
+            .item {
+                opacity: 0.8;
             }
             .prompt {
                 background-color: #333333 !important;
