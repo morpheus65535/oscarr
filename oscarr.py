@@ -356,11 +356,11 @@ def bazarr():
     try:
         history_json = requests.get(url_bazarr_api_history).json()
     except:
-        history_list.append(['Unable to connect to Bazarr. Check your settings.', '', '', ''])
+        history_list.append(['Unable to connect to Bazarr. Check your settings.', '', '', '', ''])
     else:
         for history in history_json['subtitles']:
             if len(history_list) <= 9:
-                history_list.append([history[0], history[1], history[2], history[3][0:10]])
+                history_list.append([history[0], history[1], history[2], history[3][0:10], history[4]])
 
     output = template('bazarr', __file__=__file__, oscarr_version=oscarr_version, base_url=base_url, missing_list=missing_list, history_list=history_list)
     return output

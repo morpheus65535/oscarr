@@ -51,10 +51,11 @@
                 <table class="ui very basic selectable table">
                     <thead>
                         <tr>
-                            <th class="six wide">Series</th>
+                            <th class="three wide">Series</th>
                             <th class="one wide right aligned">Episode</th>
-                            <th class="seven wide">Episode Title</th>
+                            <th class="three wide">Episode Title</th>
                             <th class="two wide">Date</th>
+                            <th class="seven wide">Description</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -64,6 +65,7 @@
                             <td class="right aligned">{{row[1]}}</td>
                             <td>{{row[2]}}</td>
                             <td>{{row[3]}}</td>
+                            <td>{{row[4]}}</td>
                         </tr>
                     %end
                     </tbody>
