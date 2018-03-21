@@ -4,6 +4,7 @@ bottle-fdsend
 gitpython
 isodate
 Pillow
+pip<=9.0.1
 pytz
 py-pretty
 requests
