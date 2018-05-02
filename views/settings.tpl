@@ -864,45 +864,208 @@
     $('#settings_form')
         .form({
             fields: {
-                settings_general_ip     		: ['regExp[/^((25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.){3}(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)$/]', 'empty'],
-                settings_general_port   		: ['integer[1..65535]', 'empty'],
-
-                settings_plex_ip 				: ['regExp[/^((25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.){3}(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)$/]', 'empty'],
-                settings_plex_port			    : ['integer[1..65535]', 'empty'],
-                settings_plex_username			: ['empty'],
-                settings_plex_password			: ['empty'],
-
-                settings_emby_ip 				: ['regExp[/^((25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.){3}(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)$/]', 'empty'],
-                settings_emby_port		    	: ['integer[1..65535]', 'empty'],
-                settings_emby_apikey			: ['exactLength[32]', 'empty'],
-                settings_emby_userid			: ['exactLength[32]', 'empty'],
-
-                settings_sonarr_ip 				: ['regExp[/^((25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.){3}(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)$/]', 'empty'],
-                settings_sonarr_port			: ['integer[1..65535]', 'empty'],
-                settings_sonarr_apikey			: ['exactLength[32]', 'empty'],
-
-                settings_radarr_ip 				: ['regExp[/^((25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.){3}(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)$/]', 'empty'],
-                settings_radarr_port			: ['integer[1..65535]', 'empty'],
-                settings_radarr_apikey			: ['exactLength[32]', 'empty'],
-
-                settings_bazarr_ip 				: ['regExp[/^((25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.){3}(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)$/]', 'empty'],
-                settings_bazarr_port			: ['integer[1..65535]', 'empty']
+                settings_general_ip : {
+                    rules : [
+                        {
+                            type : 'regExp[/^((25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.){3}(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)$/]'
+                        },
+                        {
+                            type: 'empty'
+                        }
+                    ]
+                },
+                settings_general_port : {
+                    rules : [
+                        {
+                            type : 'integer[1..65535]'
+                        },
+                        {
+                            type : 'empty'
+                        }
+                    ]
+                },
+                settings_plex_ip : {
+                    depends : 'settings_plex_enabled',
+                    rules : [
+                        {
+                            type : 'regExp[/^((25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.){3}(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)$/]'
+                        },
+                        {
+                            type : 'empty'
+                        }
+                    ]
+                },
+                settings_plex_port : {
+                    depends : 'settings_plex_enabled',
+                    rules : [
+                        {
+                            type : 'integer[1..65535]'
+                        },
+                        {
+                            type : 'empty'
+                        }
+                    ]
+                },
+                settings_plex_username : {
+                    depends : 'settings_plex_enabled',
+                    rules : [
+                        {
+                            type : 'empty'
+                        }
+                    ]
+                },
+                settings_plex_password : {
+                    depends : 'settings_plex_enabled',
+                    rules : [
+                        {
+                            type : 'empty'
+                        }
+                    ]
+                },
+                settings_emby_ip : {
+                    depends : 'settings_emby_enabled',
+                    rules : [
+                        {
+                            type : 'regExp[/^((25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.){3}(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)$/]'
+                        },
+                        {
+                            type : 'empty'
+                        }
+                    ]
+                },
+                settings_emby_port : {
+                    depends : 'settings_emby_enabled',
+                    rules : [
+                        {
+                            type : 'integer[1..65535]'
+                        },
+                        {
+                            type : 'empty'
+                        }
+                    ]
+                },
+                settings_emby_apikey : {
+                    depends : 'settings_emby_enabled',
+                    rules : [
+                        {
+                            type : 'exactLength[32]'
+                        },
+                        {
+                            type : 'empty'
+                        }
+                    ]
+                },
+                settings_emby_userid: {
+                    depends : 'settings_emby_enabled',
+                    rules : [
+                        {
+                            type : 'exactLength[32]'
+                        },
+                        {
+                            type :  'empty'
+                        }
+                    ]
+                },
+                settings_sonarr_ip : {
+                    depends : 'settings_emby_enabled',
+                    rules : [
+                        {
+                            type : 'regExp[/^((25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.){3}(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)$/]'
+                        },
+                        {
+                            type : 'empty'
+                        }
+                    ]
+                },
+                settings_sonarr_port : {
+                    depends : 'settings_emby_enabled',
+                    rules : [
+                        {
+                            type : 'integer[1..65535]'
+                        },
+                        {
+                            type : 'empty'
+                        }
+                    ]
+                },
+                settings_sonarr_apikey : {
+                    depends : 'settings_emby_enabled',
+                    rules : [
+                        {
+                            type : 'exactLength[32]'
+                        },
+                        {
+                            type : 'empty'
+                        }
+                    ]
+                },
+                settings_radarr_ip : {
+                    depends : 'settings_radarr_enabled',
+                    rules : [
+                        {
+                            type : 'regExp[/^((25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.){3}(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)$/]'
+                        },
+                        {
+                            type : 'empty'
+                        }
+                    ]
+                },
+                settings_radarr_port : {
+                    depends : 'settings_radarr_enabled',
+                    rules : [
+                        {
+                            type : 'integer[1..65535]'
+                        },
+                        {
+                            type : 'empty'
+                        }
+                    ]
+                },
+                settings_radarr_apikey : {
+                    depends : 'settings_radarr_enabled',
+                    rules : [
+                        {
+                            type : 'exactLength[32]'
+                        },
+                        {
+                            type : 'empty'
+                        }
+                    ]
+                },
+                settings_bazarr_ip : {
+                    depends : 'settings_bazarr_enabled',
+                    rules : [
+                        {
+                            type : 'regExp[/^((25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.){3}(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)$/]'
+                        },
+                        {
+                            type : 'empty'
+                        }
+                    ]
+                },
+                settings_bazarr_port : {
+                    depends : 'settings_bazarr_enabled',
+                    rules: [
+                        {
+                            type : 'integer[1..65535]'
+                        },
+                        {
+                            type : 'empty'
+                        }
+                    ]
+                }
             },
             inline : true,
             on     : 'blur',
-            onValid: function(){
-                $('#form_validation_error').hide();
-                $('.submit').removeClass('disabled');
-            },
-            onInvalid: function(){
+            onFailure: function(){
                 $('#form_validation_error').show();
                 $('.submit').addClass('disabled');
-            },
-            onFailure: function(){
                 return false;
             },
             onSuccess: function(){
+                $('#form_validation_error').hide();
                 $('#loader').addClass('active');
+                $('.submit').removeClass('disabled');
             }
         })
     ;
@@ -914,5 +1077,10 @@
     $( document ).ready(function() {
         $('.form').form('validate form');
         $('#loader').removeClass('active');
-    });
+    })
+
+    $('#settings_form').focusout(function() {
+        $('.form').form('validate form');
+        $('#loader').removeClass('active');
+    })
 </script>
