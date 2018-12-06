@@ -340,7 +340,7 @@ def bazarr():
     from get_bazarr_settings import get_bazarr_settings
     url_bazarr = get_bazarr_settings()[0]
 
-    url_bazarr_api_missing = url_bazarr + "/api/wanted"
+    url_bazarr_api_missing = url_bazarr + "/api/series/wanted"
     missing_list = []
     try:
         missing_json = requests.get(url_bazarr_api_missing).json()
@@ -351,7 +351,7 @@ def bazarr():
             if len(missing_list) <= 9:
                 missing_list.append([missing[0], missing[1], missing[2], missing[3][0:10]])
 
-    url_bazarr_api_history = url_bazarr + "/api/history"
+    url_bazarr_api_history = url_bazarr + "/api/series/history"
     history_list = []
     try:
         history_json = requests.get(url_bazarr_api_history).json()
