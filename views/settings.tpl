@@ -225,7 +225,7 @@
 
                         <div class="middle aligned row">
                             <div class="right aligned four wide column">
-                                <label>Listening IP address</label>
+                                <label>Hostname or IP address</label>
                             </div>
                             <div class="five wide column">
                                 <div class='field'>
@@ -345,7 +345,7 @@
 
                         <div class="middle aligned row">
                             <div class="right aligned four wide column">
-                                <label>Listening IP address</label>
+                                <label>Hostname or IP address</label>
                             </div>
                             <div class="five wide column">
                                 <div class='field'>
@@ -465,7 +465,7 @@
 
                         <div class="middle aligned row">
                             <div class="right aligned four wide column">
-                                <label>Listening IP address</label>
+                                <label>Hostname or IP address</label>
                             </div>
                             <div class="five wide column">
                                 <div class='field'>
@@ -567,7 +567,7 @@
 
                         <div class="middle aligned row">
                             <div class="right aligned four wide column">
-                                <label>Listening IP address</label>
+                                <label>Hostname or IP address</label>
                             </div>
                             <div class="five wide column">
                                 <div class='field'>
@@ -669,7 +669,7 @@
 
                         <div class="middle aligned row">
                             <div class="right aligned four wide column">
-                                <label>Listening IP address</label>
+                                <label>Hostname or IP address</label>
                             </div>
                             <div class="five wide column">
                                 <div class='field'>
@@ -888,9 +888,6 @@
                     depends : 'settings_plex_enabled',
                     rules : [
                         {
-                            type : 'regExp[/^((25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.){3}(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)$/]'
-                        },
-                        {
                             type : 'empty'
                         }
                     ]
@@ -925,9 +922,6 @@
                 settings_emby_ip : {
                     depends : 'settings_emby_enabled',
                     rules : [
-                        {
-                            type : 'regExp[/^((25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.){3}(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)$/]'
-                        },
                         {
                             type : 'empty'
                         }
@@ -970,9 +964,6 @@
                     depends : 'settings_emby_enabled',
                     rules : [
                         {
-                            type : 'regExp[/^((25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.){3}(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)$/]'
-                        },
-                        {
                             type : 'empty'
                         }
                     ]
@@ -1003,9 +994,6 @@
                     depends : 'settings_radarr_enabled',
                     rules : [
                         {
-                            type : 'regExp[/^((25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.){3}(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)$/]'
-                        },
-                        {
                             type : 'empty'
                         }
                     ]
@@ -1035,9 +1023,6 @@
                 settings_bazarr_ip : {
                     depends : 'settings_bazarr_enabled',
                     rules : [
-                        {
-                            type : 'regExp[/^((25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.){3}(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)$/]'
-                        },
                         {
                             type : 'empty'
                         }
