@@ -252,7 +252,7 @@ def sonarr():
         break_list.append(['Unable to connect to Sonarr. Check your settings.', '', '', '', ''])
     else:
         for item in break_json:
-            if 'statistics' in item['seasons'][-1]:
+            if item['seasons'] and 'statistics' in item['seasons'][-1]:
                 if 'previousAiring' in item['seasons'][-1]['statistics'] and 'nextAiring' in item['seasons'][-1]['statistics']:
                     delta = datetime.strptime(item['seasons'][-1]['statistics']['nextAiring'], '%Y-%m-%dT%H:%M:%SZ') - datetime.strptime(item['seasons'][-1]['statistics']['previousAiring'], '%Y-%m-%dT%H:%M:%SZ')
                     if delta.total_seconds() > (7 * 24 * 60 * 60) and (datetime.strptime(item['seasons'][-1]['statistics']['nextAiring'][0:10], '%Y-%m-%d') - datetime.strptime(now, '%Y-%m-%d')).total_seconds() > (7 * 24 * 60 * 60) and item['seasons'][-1]['statistics']['episodeCount'] + 1 > 1:
@@ -268,7 +268,7 @@ def sonarr():
         upcoming_list.append(['Unable to connect to Sonarr. Check your settings.', '', '', '', ''])
     else:
         for item in upcoming_json:
-            if 'statistics' in item['seasons'][-1]:
+            if item['seasons'] and 'statistics' in item['seasons'][-1]:
                 if 'nextAiring' in item['seasons'][-1]['statistics']:
                     if (datetime.strptime(item['seasons'][-1]['statistics']['nextAiring'][0:10], '%Y-%m-%d') - datetime.strptime(now, '%Y-%m-%d')).total_seconds() > (7 * 24 * 60 * 60) and item['seasons'][-1]['statistics']['episodeCount'] + 1 == 1:
                         upcoming_list.append([item['title'], item['seasons'][-1]['seasonNumber'], item['seasons'][-1]['statistics']['nextAiring'][0:10]])
