@@ -1,3 +1,5 @@
+# I don't have time to maintain Oscarr anymore. Feel free to fork it and make it evolve as you wish.
+
 # Oscarr
 Oscarr is a dashboard application for users of Plex, Emby, Sonarr, Radarr and Bazarr. It gives you and overview of your media management software.
 
